@@ -1,0 +1,15 @@
+name: TYPO3 Documentation on Github
+description: 'Build TYPO3 Documentation and trigger gh-pages deployment'
+branding:
+  icon: 'upload-cloud'
+  color: 'orange'
+inputs:
+  documentationPath:
+    description: 'Path to your build Documentation'
+    required: true
+    default: '~/'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    DOCUPATH: ${{ inputs.documentationPath }}
