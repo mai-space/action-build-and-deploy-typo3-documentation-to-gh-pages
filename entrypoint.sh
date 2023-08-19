@@ -7,11 +7,14 @@ echo "> Starting ${GITHUB_WORKFLOW}:${GITHUB_ACTION}"
 # Available env
 echo "DOCUPATH: ${DOCUPATH}"
 
+# Get the absolute path of the current directory
+current_dir=$(dirname "$(readlink -f "$0")")
+
 # Start Docker container
 docker run -d \
   --name docs \
-  --volume ../:/PROJECT:ro \
-  --volume ../Documentation-GENERATED-temp:/RESULT \
+  --volume "$current_dir/:/PROJECT:ro" \
+  --volume "$current_dir/Documentation-GENERATED-temp:/RESULT" \
   ghcr.io/t3docs/render-documentation:latest \
   makehtml
 
