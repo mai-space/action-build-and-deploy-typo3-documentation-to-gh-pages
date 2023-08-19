@@ -11,7 +11,7 @@ echo "DOCUPATH: ${DOCUPATH}"
 current_dir=$(dirname "$(readlink -f "$0")")
 
 # Start Docker container
-docker run -d \
+docker run --rm -t -d \
   --name docs \
   --volume "$current_dir/:/PROJECT:ro" \
   --volume "$current_dir/Documentation-GENERATED-temp:/RESULT" \
