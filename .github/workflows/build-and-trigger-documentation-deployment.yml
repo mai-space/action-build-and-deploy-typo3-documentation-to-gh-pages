@@ -1,11 +1,17 @@
 name: Build and Trigger Documentation Deployment
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'Documentation/**'
+  workflow_call:
+    inputs:
+      github_token:
+        required: true
+        type: string
+      publish_dir:
+        required: true
+        type: string
+      secrets:
+        envPAT:
+          required: true
 
 jobs:
   build-and-deploy:
