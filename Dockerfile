@@ -5,7 +5,7 @@ LABEL "com.github.actions.description"="Build TYPO3 Documentation and trigger gh
 LABEL "com.github.actions.icon"="upload-cloud"
 LABEL "com.github.actions.color"="orange"
 
-LABEL "repository"="https://github.com/mai-space/action-build-and-deploy-typo3-documentation-to-gh-pages"
+LABEL "repository"="https://github.com/mai-space/action-typo3-documentation-on-github"
 LABEL "homepage"="https://maispace.de"
 LABEL "maintainer"="Joel Mai <joel@maispace.de>"
 
