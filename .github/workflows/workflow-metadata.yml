@@ -1,0 +1,5 @@
+name: Build and Trigger Documentation Deployment
+description: |
+  This workflow builds and triggers the deployment of documentation using Docker Compose.
+icon: upload-cloud
+color: 'orange'
